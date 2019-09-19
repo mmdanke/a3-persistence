@@ -1,74 +1,61 @@
-Assignment 3 - Persistence: Two-tier Web Application with Flat File Database, Express server, and CSS template
-===
+## Assignment 3 - Persistence: Two-Tier Web Application with Flat File Database, Express server, and CSS template
 
-Due: September 16th, by 11:59 AM.
+a3-manasidanke
+mmdanke-Manasi Danke
 
-This assignnment continues where we left off, extending it to use the most popular Node.js server framework (express), a flat file database suitable for small applications (lowdb), and a CSS application framework / template of your choice (Boostrap, Material Design, Semantic UI, Pure etc.)
+## Puppy Pals!
+My glitch link: https://a3-manasidanke.glitch.me/
+
+### The goal of the application:
+
+The application allows user, tester, and dogowner, Charlie, to book appointments with Puppy Palls so that he able to book appointments for his dogs to get pampered. He is able to log into his personal account, which saves and displays only his personal information and past booking informatiom. Once he fills out the booking form and specifies what kind of pampering session he wants the pupper to have, that booking is added to his past bookings table. He is even able to update his booking to his satisfaction and can delete it as well. Charlie is able to log out of his account as well.
+
+In this particular situation, Charlie is the only user since Pupply Palls would love to hear his feedback on their prototype before they continue to develop the website.
+
+### Challenges you faced in creating the application:
+
+Although the database does work, I faced a lot of challenges implementing lowdb because I was unsure whether it was saving data in my db.json and db1.json. I was able to use lowdb to achieve the minimal technical requirements of this assignment, but it became increasingly harder to debug when I could not find where my newly registered users were being saved. 
+
+# For that reason, I will assume that Charlie is our only current user with username: charlie and password: charliee 
+
+Besides that, I chose to attempt add, update, and delete booking the last assignment and has a bug with deleting entries since multiple entires would delete at times. I had to spend a while debugging that before I could be fully invested in implementing express, passport, and lowdb as a database.
+
+### What authentication strategy / database you chose to use and why:
+
+I chose to implement lowdb for this particular project since I was not storing too much information in the database. This database is a "slim alternative to a heavyweight" database such as Firebase and made the most sense to use for this particular project,assignment, and time. If Pupper Palls were to get incredibly popular, I would look to switch to Firebase in the future.
 
 
-Baseline Requirements
----
+### What CSS framework you used and why:
 
-Your application is required to implement the following functionalities:
+I chose to use Bootstrap for this assignment since it makes the application appear organized and clean.
 
-- a `Server`, created using Express (no alternatives will be accepted for this assignment)
-- a `Results` functionality which shows the entire dataset residing in the server's memory
-- a `Form/Entry` functionality which allows users to add, modify, and delete data items (must be all three!) associated with their user name / account.
-- Use of at least five [Express middleware packages](https://expressjs.com/en/resources/middleware.html). Explore! 
-- Basic authentication using the [Passport middleware](http://www.passportjs.org) for Express (this counts as one of your five middleware packages). We encourage using the Local strategy, but OAuth (Open Authentication) can also be used for additional technical achievement. The course staff cannot help you with the various flavors of OAuth strategies. YOU MUST PROVIDE US WITH ACCOUNT CREDENTIALS TO LOGIN TO YOUR APPLICATION IF YOU USE OAUTH. The course staff cannot be expected to have credentials for any particular OAuth service.
-- Persistent data storage in between server sessions. [lowdb](https://github.com/typicode/lowdb) is a suitable database package for this assignment and will be discussed in class.
-- Use of a [CSS framework or template](https://github.com/troxler/awesome-css-frameworks). This should do the bulk of your styling/CSS for you and be appropriate to your application. For example, don't use [NES.css](https://nostalgic-css.github.io/NES.css/) (which is awesome!) unless you're creating a game or some type of retro 80s site.
+I only used Bootstrap for the login page, but designed my own template for everything after the inital login page I chose to display with display.style.
 
-Your application is required to demonstrate the use of the following concepts:
+### Modifications to the CSS framework I made via custom CSS I authored:
 
-HTML:
-- HTML input tags and form fields of various flavors (`<textarea>`, `<input>`, checkboxes, radio buttons etc.)
-- HTML that can display all data *for a particular authenticated user*. Note that this is different from the last assignnment, which required the display of all data in memory on the server.
+I only used Bootstrap for the login page, deleted the sign in/sing up tab, deleted the forgotted password footer, added my own div container with the Puppy Palls banner to add consistency to the application, added a dog picture, added text, added my own letter animation to "Log In Below", and added a register button, and added a register form.
 
-Note that it might make sense to have two simple pages for this assignment, one that handles login / authentication, and one that contains the rest of your application. For this assignment, it is acceptable to simply create new user accounts upon login if none exist, however, you must alert your users to this fact. If you're not using OAuth 
 
-CSS:
-- CSS styling should primarily be provided by your chosen template/framework. Oftentimes a great deal of care has been put into designing CSS templates; don't override their stylesheets unless you are extremely confident in your graphic design capabilities. The idea is to use CSS templates that give you a professional looking design aesthetic without requiring you to be a graphic designer yourself.
+### The five Express middleware packages I used and a summary of what each one does:
 
-JavaScript:
-- At minimum, a small amount of front-end JavaScript to get / fetch data from the server. See the [previous assignment](https://github.com/cs4241-19a/a2-shortstack) for reference.
-
-Node.js:
-- A server using Express, at least five pieces of Express middleware, and a persistent database (a flat file using lowdb is great).
-
-Deliverables
----
-
-Do the following to complete this assignment:
-
-1. Implement your project with the above requirements. A good potential starting point is to use the "hello-express" project template inside of Glitch; this appears as an option when you hit the "New Project" button. Use the work you did in the last assignment as a reference to implement functionality, as well as the notes from class on 9/9 and 9/12.
-2. If you developed your project locally, deploy your project to Glitch, and fill in the appropriate fields in your package.json file.
-3. Test your project to make sure that when someone goes to your main page on Glitch, it displays correctly.
-4. Ensure that your project has the proper naming scheme `a3-yourname` so we can find it.
-5. Fork this repository and modify the README to the specifications below. You do not need to include any of your project files in this repo (we will see those on Glitch), you only need to update and commit the README file.
-6. Create and submit a Pull Request to the original repo. Name the pull request using the following template: `a3-gitname-firstname-lastname`.
-
-Sample Readme (delete the above when you're ready to submit, and modify the below so with your links and descriptions)
----
-
-## Your Web Application Title
-
-your glitch link e.g. http://a3-charlieroberts.glitch.me
-
-Include a very brief summary of your project here. Images are encouraged, along with concise, high-level text. Be sure to include:
-
-- the goal of the application
-- challenges you faced in realizing the application
-- what authentication strategy / database you chose to use and why (choosing one because it seemed the easiest to implement is perfectly acceptable)
-- what CSS framework you used and why.
-  - include any modifications to the CSS framework you made via custom CSS you authored.
-- the five Express middleware packages you used and a short (one sentence) summary of what each one does.
+   - Express: a middleware and routing web framework with minimal functionality that listens for requests and calls the appropriate functions.
+ - Cookie-parser: "parses cookies attached to the client request object."
+ - Passport: authenticates requests through strategies such as the Local strategy(in this example).
+ - Helmet: automatically sets various HTTP headers and prevents "sensitive information from unintentially being passed between the server and client."
+ - Express.static: serves static files from the path where files are being drawn from by the application
+ - Body-parser: parses incoming http request bodies before handlers.
+ 
 
 ## Technical Achievements
-- **Tech Achievement 1**: I used OAuth authentication via the GitHub strategy
-- **Tech Achievement 2**: I used over ten Express middleware packages, enabling me to create a server that...
+- **Tech Achievement 1**: Implemented error checking for username and password, which does not give access to the user if this person inputs the incorrect account details. Please note that the username is charlie and and password is charliee
+- **Tech Achievement 2**: Implemented a log out button that signs the user off and returns to the log in page. For increased security, the application automatically signs the user off and returns the user to the login page if the user has the application open to logged when they are signed in.
+- **Tech Achievement 3**: I chose to play with style.display to add this new login screen and chose to show it and make it disappear when needed, while not showing the main application page unless the username and password are correct.
+- **Note**: I attempted to implement a registration button for another technical achievement, but I am have having difficulties with my database in implementing that.
 
 ### Design/Evaluation Achievements
-- **Design Achievement 1**: I tested my application using screen reading software, and found that...
-- **Design Achievement 2**: I followed best practices for accessibility, including providing alt attributes for images and using semantic HTML. There are no `<div>` or `<span>` elements in my document.
-- **Design Achievement 3**: We tested the application with n=X users, finding that...
+- **Design Achievement 1**: I received a lot of feedback from my friends regarding the login page as I implemented different versions of it. Using this input and suggestions, I chose to hide the main page until the user Login Page, chose to incorporate the Pupper Palls banner to keep the consistency in the application, and added the picture of a dog getting pampered to describe the purpose of the application without too many words.
+- **Design Achievement 2**: I added animation to the login page so that the login page slides from above and the username and password entry boxes appear soon after one would read the "Log In Below" heading.
+
+### Resources Used:
+ - Similar to last week's assignment, I was able to reference github, w3schools, bootsnip, and formal documentation on passport, lowdb, express, and bootstrap.
+
