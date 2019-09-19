@@ -8,13 +8,13 @@ My glitch link:https://glitch.com/~a3-manasi-danke
 
 ### The goal of the application:
 
-The application allows user, tester, and dogowner, Charlie, to book appointments with Puppy Palls so that he able to book appointments for his dogs to get pampered. He is able to log into his personal account, which saves and displays only his personal information and past booking informatiom. Once he fills out the booking form and specifies what kind of pampering session he wants the pupper to have, that booking is added to his past bookings table. He is even able to update his booking to his satisfaction and can delete it as well. Charlie is able to log out of his account as well.
+The application allows user, tester, and dogowner, Charlie, to book appointments with Puppy Palls so that he is able to book appointments for his dogs to get pampered. He is able to log into his personal account, which saves and displays only his personal information and past booking informatiom. Once he fills out the booking form and specifies what kind of pampering session he wants the pupper to have, that booking is added to his past bookings table. He is even able to update his booking to his satisfaction and can delete it as well. Charlie is able to log out of his account as well when he is finished using the application.
 
 In this particular situation, Charlie is the only user since Pupply Palls would love to hear his feedback on their prototype before they continue to develop the website.
 
 ### Challenges you faced in creating the application:
 
-Although the database does work, I faced a lot of challenges implementing lowdb because I was unsure whether it was saving data in my db.json and db1.json. I was able to use lowdb to achieve the minimal technical requirements of this assignment, but it became increasingly harder to debug when I could not find where my newly registered users were being saved. 
+Although the database does work, I faced a lot of challenges implementing lowdb because I was unsure whether it was saving data in my db.json or db1.json. I was able to use lowdb to achieve the minimal technical requirements of this assignment, but it became increasingly harder to debug when I could not find where my newly registered users were being saved. 
 
 # For that reason, I will assume that Charlie is our only current user with username: charlie and password: charliee 
 
@@ -33,10 +33,10 @@ I only used Bootstrap for the login page, but designed my own template for every
 
 ### Modifications to the CSS framework I made via custom CSS I authored:
 
-I only used Bootstrap for the login page, deleted the sign in/sing up tab, deleted the forgotted password footer, added my own div container with the Puppy Palls banner to add consistency to the application, added a dog picture, added text, added my own letter animation to "Log In Below", and added a register button, and added a register form.
+I only used Bootstrap for the login page, deleted the sign in/sign up tab, deleted the forgotten password footer, added my own div container with the Puppy Palls banner to add consistency to the application, added a dog picture, added text, added my own letter animations, added a register button, and added a register form.
 
 
-### The five Express middleware packages I used and a summary of what each one does:
+### The Express middleware packages I used and a summary of what each one does:
 
    - Express: a middleware and routing web framework with minimal functionality that listens for requests and calls the appropriate functions.
  - Cookie-parser: "parses cookies attached to the client request object."
